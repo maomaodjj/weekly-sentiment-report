@@ -1,0 +1,31 @@
+{
+  "name": "weekly-sentiment-report",
+  "version": "2.0.0",
+  "description": "自动生成盈米基金舆情周报。从 Excel 素材文件读取数据，筛选权威媒体报道，生成 Word 格式的舆情监测周报。",
+  "license": "MIT",
+  "author": "盈米基金",
+  "keywords": [
+    "claude-code-skill",
+    "sentiment-analysis",
+    "report-generation",
+    "yingmi",
+    "舆情周报",
+    "盈米基金"
+  ],
+  "claude": {
+    "skill": true,
+    "trigger": "当用户需要从舆情监测数据生成周报时，或用户提及'舆情周报'、'盈米'、'舆情监测'等关键词时"
+  },
+  "dependencies": {
+    "openpyxl": ">=3.0.0",
+    "python-docx": ">=0.8.11"
+  },
+  "scripts": {
+    "generate": "python3 scripts/generate_report.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maomaodjj/weekly-sentiment-report"
+  },
+  "homepage": "https://github.com/maomaodjj/weekly-sentiment-report#readme"
+}

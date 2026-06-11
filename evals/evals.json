@@ -1,0 +1,41 @@
+{
+  "skill_name": "weekly-sentiment-report",
+  "description": "测试用例：验证舆情周报生成 skill 的触发准确性和执行效果",
+  "evals": [
+    {
+      "id": 1,
+      "name": "直接触发-舆情周报",
+      "prompt": "生成本周的盈米基金舆情周报",
+      "expected_output": "skill 应被触发，请求用户提供必要的参数：主数据文件路径、时间范围、输出路径",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "场景描述-Excel数据转Word报告",
+      "prompt": "我有一个Excel舆情数据文件，需要生成Word格式的周报",
+      "expected_output": "skill 应被触发，识别为舆情周报场景，请求参数",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "关键词触发-媒体监测",
+      "prompt": "帮我做一下媒体监测，把最近的报道整理成报告",
+      "expected_output": "skill 应被触发，询问是否为舆情周报任务",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "完整参数-带文件路径",
+      "prompt": "生成盈米舆情周报：数据文件是 /data/20260301-20260307.xlsx，时间范围 3月1日到3月7日，输出到 /tmp/周报.docx",
+      "expected_output": "skill 被触发，执行生成脚本或准备执行",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "竞品要闻-特定模块",
+      "prompt": "本周竞品有什么新闻？需要从Excel数据提取",
+      "expected_output": "skill 应被触发，说明可以生成竞品要闻模块",
+      "files": []
+    }
+  ]
+}
